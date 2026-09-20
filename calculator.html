@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora — VoltCalc</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="VoltCalc — página inicial">
+        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect width="48" height="48" rx="12" fill="#63dec0" />
+          <path d="M27 7L13 26H23L20 41L36 20H26L27 7Z" fill="#101922" />
+        </svg>
+        <span class="brand-name">VoltCalc</span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a class="nav-link" aria-current="page" href="./calculator.html">Calculadora</a>
+      </nav>
+    </header>
+    <main>
+      <small>EM DESENVOLVIMENTO · v0.1 · ETAPA 1</small>
+      <h1>Calculadora</h1>
+      <p>Calcule a corrente elétrica a partir da potência e da tensão.</p>
+      <section>
+        <h2>Corrente elétrica</h2>
+        <p>Exemplo fixo: potência de 5500 W e tensão de 220 V.</p>
+        <p>I = P / V</p>
+        <output id="result">Carregando cálculo…</output>
+      </section>
+      <p>Próximo passo: entender o cálculo e preparar uma função. Os campos para digitar valores serão adicionados depois.</p>
+      <small>Exemplo de carga resistiva ideal. Não dimensiona uma instalação.</small>
+    </main>
+    <script src="/preview.js"></script>
+  </body>
+</html>
+
