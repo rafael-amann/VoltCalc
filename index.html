@@ -6,6 +6,11 @@
     <title>VoltCalc — v0.1</title>
     <style>
       body { margin: 0; background: #101922; color: #edf4fa; font: 18px/1.6 system-ui, sans-serif; }
+      .site-header { padding: 20px 32px; border-bottom: 1px solid #2b3c4b; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; color: #edf4fa; text-decoration: none; }
+      .brand:focus-visible { outline: 2px solid #63dec0; outline-offset: 6px; border-radius: 8px; }
+      .brand-logo { width: 44px; height: 44px; flex-shrink: 0; }
+      .brand-name { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
       main { max-width: 680px; margin: 12vh auto; padding: 32px; }
       small { color: #63dec0; } h1 { font-size: 48px; margin-bottom: 8px; }
       section { background: #1b2a38; padding: 28px; border-radius: 16px; margin: 32px 0; }
@@ -14,6 +19,15 @@
     </style>
   </head>
   <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="VoltCalc — página inicial">
+        <svg class="brand-logo" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect width="48" height="48" rx="12" fill="#63dec0" />
+          <path d="M27 7L13 26H23L20 41L36 20H26L27 7Z" fill="#101922" />
+        </svg>
+        <span class="brand-name">VoltCalc</span>
+      </a>
+    </header>
     <main>
       <small>EM DESENVOLVIMENTO · v0.1 · ETAPA 1</small>
       <h1>VoltCalc</h1>
