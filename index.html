@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoltCalc — v0.1</title>
+    <style>
+      body { margin: 0; background: #101922; color: #edf4fa; font: 18px/1.6 system-ui, sans-serif; }
+      main { max-width: 680px; margin: 12vh auto; padding: 32px; }
+      small { color: #63dec0; } h1 { font-size: 48px; margin-bottom: 8px; }
+      section { background: #1b2a38; padding: 28px; border-radius: 16px; margin: 32px 0; }
+      output { display: block; font-size: 40px; color: #63dec0; }
+      p { color: #bfcedb; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <small>EM DESENVOLVIMENTO · v0.1 · ETAPA 1</small>
+      <h1>VoltCalc</h1>
+      <p>Aprendendo TypeScript com cálculos elétricos.</p>
+      <section>
+        <h2>Corrente elétrica</h2>
+        <p>Exemplo fixo: potência de 5500 W e tensão de 220 V.</p>
+        <p>I = P / V</p>
+        <output id="result">Carregando cálculo…</output>
+      </section>
+      <p>Próximo passo: entender o cálculo e preparar uma função. Os campos para digitar valores serão adicionados depois.</p>
+      <small>Exemplo de carga resistiva ideal. Não dimensiona uma instalação.</small>
+    </main>
+    <script src="/preview.js"></script>
+  </body>
+</html>
