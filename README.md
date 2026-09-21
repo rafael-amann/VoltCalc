@@ -40,6 +40,8 @@ O servidor usa JavaScript executado pelo Node.js, apenas como ferramenta de dese
 
 ## Verificação
 
+A página de Calculadoras também inclui **Consumo de Energia**: potência por aparelho, quantidade, horas por dia, dias no mês e tarifa manual em R$/kWh. `src/energy.ts` calcula e valida; `src/energy-form.ts` conecta o formulário. Não há tarifa predefinida. Resultados diários correspondem a um dia de uso; resultados mensais multiplicam pelos dias informados. O custo é estimado e não representa necessariamente o total da conta.
+
 ```sh
 npm run check
 npm test

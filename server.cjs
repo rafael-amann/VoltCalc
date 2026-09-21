@@ -10,6 +10,8 @@ const routes = {
   '/styles.css': ['styles.css', 'text/css'],
   '/assets/voltcalc-mark.svg': ['assets/voltcalc-mark.svg', 'image/svg+xml'],
   '/dist/main.js': ['dist/main.js', 'text/javascript'],
+  '/dist/energy.js': ['dist/energy.js', 'text/javascript'],
+  '/dist/energy-form.js': ['dist/energy-form.js', 'text/javascript'],
   '/dist/calculations.js': ['dist/calculations.js', 'text/javascript'],
 };
 

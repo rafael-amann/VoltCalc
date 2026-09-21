@@ -8,7 +8,7 @@
     "check": "tsc --noEmit",
     "build": "tsc",
     "start": "npm run build && node server.cjs",
-    "test": "npm run build && node --test tests/calculations.test.mjs"
+    "test": "npm run build && node --test tests/calculations.test.mjs tests/energy.test.mjs"
   },
   "devDependencies": {
     "typescript": "^7.0.2"

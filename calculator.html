@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora — VoltCalc</title>
+    <title>Calculadoras — VoltCalc</title>
     <link rel="icon" href="./assets/voltcalc-mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -20,9 +20,14 @@
     </header>
     <main class="calculator-main">
       <small>FERRAMENTAS ELÉTRICAS · v0.1</small>
-      <h1>Calculadora</h1>
-      <p>Escolha o que deseja calcular e informe os dois valores que você conhece.</p>
-      <section>
+      <h1>Calculadoras</h1>
+      <nav class="tool-links" aria-label="Ferramentas de cálculo">
+        <a class="nav-link" href="#electrical">Grandezas elétricas</a>
+        <a class="nav-link" href="#energy">Consumo de energia</a>
+      </nav>
+      <section id="electrical" aria-labelledby="electrical-title">
+        <h2 id="electrical-title">Grandezas elétricas</h2>
+        <p>Escolha o que deseja calcular e informe os dois valores que você conhece.</p>
         <form id="calculator-form" novalidate>
           <label for="target">O que você quer calcular?</label>
           <select id="target">
@@ -55,7 +60,47 @@
       </section>
       <p class="help">I = corrente · V = tensão · R = resistência · P = potência.</p>
       <small>Para circuitos resistivos em corrente contínua ou cargas resistivas ideais em corrente alternada (valores eficazes, fator de potência 1). Não se aplica diretamente a motores ou sistemas trifásicos e não dimensiona instalações.</small>
+      <section id="energy" aria-labelledby="energy-title">
+        <h2 id="energy-title">Calculadora de Consumo de Energia</h2>
+        <p>Estime o consumo de um ou mais aparelhos de mesma potência e com o mesmo tempo de uso.</p>
+        <form id="energy-form" novalidate>
+          <div class="input-grid">
+            <div>
+              <label for="energy-power">Potência por aparelho (W)</label>
+              <input id="energy-power" name="power" type="text" inputmode="decimal" aria-describedby="energy-help energy-error" />
+            </div>
+            <div>
+              <label for="energy-quantity">Quantidade de aparelhos</label>
+              <input id="energy-quantity" name="quantity" type="text" inputmode="numeric" aria-describedby="energy-help energy-error" />
+            </div>
+            <div>
+              <label for="energy-hours">Uso por dia (horas)</label>
+              <input id="energy-hours" name="hours" type="text" inputmode="decimal" aria-describedby="energy-help energy-error" />
+            </div>
+            <div>
+              <label for="energy-days">Uso por mês (dias)</label>
+              <input id="energy-days" name="days" type="text" inputmode="numeric" aria-describedby="energy-help energy-error" />
+            </div>
+          </div>
+          <label for="energy-tariff">Tarifa de energia (R$/kWh)</label>
+          <input id="energy-tariff" name="tariff" type="text" inputmode="decimal" aria-describedby="tariff-help energy-help energy-error" />
+          <p id="tariff-help" class="help">Informe sua tarifa manualmente, consultando sua conta ou distribuidora. Ela varia conforme região e condições tarifárias.</p>
+          <p id="energy-help" class="help">Use vírgula ou ponto decimal, sem separadores de milhar. Quantidade inteira a partir de 1; horas entre 0 e 24; dias inteiros entre 0 e 31.</p>
+          <p class="formula">kWh/dia de uso = W ÷ 1000 × horas × quantidade</p>
+          <button type="submit">Calcular consumo e custo</button>
+          <p id="energy-error" class="form-error" role="alert"></p>
+          <div id="energy-results" class="result-panel energy-results" aria-live="polite" aria-atomic="true">
+            <div><span>Consumo diário</span><output id="daily-consumption">—</output></div>
+            <div><span>Consumo mensal</span><output id="monthly-consumption">—</output></div>
+            <div><span>Custo diário estimado</span><output id="daily-cost">—</output></div>
+            <div><span>Custo mensal estimado</span><output id="monthly-cost">—</output></div>
+          </div>
+          <p class="help">Diário corresponde a um dia de uso. Mensal corresponde aos dias informados. Consideramos potência constante durante o período; aparelhos que ligam e desligam automaticamente podem consumir diferente.</p>
+          <p class="help">O custo é uma estimativa para os aparelhos informados. A conta real pode incluir impostos, bandeiras tarifárias, taxas e outros componentes que não estejam incluídos na tarifa digitada.</p>
+        </form>
+      </section>
     </main>
     <script type="module" src="./dist/main.js"></script>
+    <script type="module" src="./dist/energy-form.js"></script>
   </body>
 </html>
