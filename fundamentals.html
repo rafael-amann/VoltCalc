@@ -23,8 +23,8 @@
     <main class="calculator-main fundamentals-main">
       <small>APRENDA O BÁSICO</small>
       <h1>Fundamentos Elétricos</h1>
-      <p>Seis conceitos para entender os números e as fórmulas da calculadora.</p>
-      <p class="help">Os exemplos usam circuitos resistivos em corrente contínua. Para cargas resistivas ideais em corrente alternada, usamos valores eficazes e fator de potência 1.</p>
+      <p>Seis conceitos para entender a eletricidade em casas e edifícios.</p>
+      <p class="help">Nos exemplos de chuveiro e aquecedor, consideramos cargas resistivas ideais em corrente alternada, com valores eficazes e fator de potência 1. São exemplos de cálculo, não de dimensionamento de cabos ou disjuntores.</p>
       <div class="fundamentals-grid">
         <section class="concept-card" aria-labelledby="voltage-title">
           <small>01 · V — VOLT</small>
@@ -33,31 +33,31 @@
           <p class="formula">V = I × R</p>
           <p class="help">V: tensão em volts · I: corrente em amperes · R: resistência em ohms.</p>
           <figure class="concept-visual">
-            <svg viewBox="0 0 320 100" role="img" aria-label="Dois terminais de uma bateria com diferença de potencial de 12 volts">
+            <svg viewBox="0 0 320 100" role="img" aria-label="Diferença de potencial de 220 volts entre os dois terminais de alimentação de um chuveiro">
               <circle cx="50" cy="48" r="22" /><circle cx="270" cy="48" r="22" />
               <path d="M80 48H240M90 40L80 48L90 56M230 40L240 48L230 56" />
-              <text x="50" y="54">+</text><text x="270" y="54">−</text>
-              <text x="160" y="30">12 V</text><text x="160" y="88">Diferença entre dois pontos</text>
+              <text x="50" y="54">1</text><text x="270" y="54">2</text>
+              <text x="160" y="30">220 V ~</text><text x="160" y="88">Alimentação do chuveiro</text>
             </svg>
-            <figcaption>Uma bateria mantém tensão entre seus terminais.</figcaption>
+            <figcaption>A tensão é considerada entre os dois terminais de alimentação.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> se passam 2 A por um resistor de 6 Ω, a tensão sobre ele é 2 × 6 = <strong>12 V</strong>.</p>
+          <p><strong>Na prática:</strong> um chuveiro de 5500 W projetado para 220 V funciona com essa tensão entre seus terminais. No modelo resistivo, 25 A × 8,8 Ω = <strong>220 V</strong>.</p>
         </section>
         <section class="concept-card" aria-labelledby="current-title">
           <small>02 · I — AMPERE (A)</small>
           <h2 id="current-title">Corrente elétrica</h2>
           <p>É a quantidade de carga elétrica que atravessa uma parte do circuito a cada segundo. Em um circuito fechado, uma fonte pode manter esse movimento de cargas.</p>
-          <p class="formula">I = V / R</p>
-          <p class="help">Para a mesma resistência, uma tensão maior produz uma corrente maior.</p>
+          <p class="formula">I = P / V</p>
+          <p class="help">Para uma carga resistiva, divida a potência em watts pela tensão em volts.</p>
           <figure class="concept-visual">
-            <svg viewBox="0 0 320 100" role="img" aria-label="Seta indicando corrente convencional de 2 amperes ao longo de um condutor">
-              <path d="M20 35H300M20 65H300M70 50H245L233 42M245 50L233 58" />
+            <svg viewBox="0 0 320 100" role="img" aria-label="Corrente alternada de valor eficaz 25 amperes no circuito de um chuveiro">
+              <path d="M20 35H300M20 65H300M70 50H245L233 42M245 50L233 58M70 50L82 42M70 50L82 58" />
               <circle cx="45" cy="50" r="4" /><circle cx="105" cy="50" r="4" /><circle cx="165" cy="50" r="4" />
-              <text x="160" y="22">I = 2 A</text><text x="160" y="90">Sentido da corrente convencional</text>
+              <text x="160" y="22">I = 25 A</text><text x="160" y="90">Circuito do chuveiro</text>
             </svg>
-            <figcaption>A corrente descreve o fluxo de carga.</figcaption>
+            <figcaption>Na rede alternada, a corrente muda de sentido periodicamente.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> um resistor de 6 Ω ligado a 12 V conduz 12 / 6 = <strong>2 A</strong>.</p>
+          <p><strong>Na prática:</strong> um chuveiro operando a 5500 W em 220 V solicita 5500 / 220 = <strong>25 A</strong> do seu circuito.</p>
         </section>
         <section class="concept-card" aria-labelledby="resistance-title">
           <small>03 · R — OHM (Ω)</small>
@@ -66,44 +66,45 @@
           <p class="formula">R = V / I</p>
           <p class="help">Ohm é a unidade da resistência; seu símbolo é Ω.</p>
           <figure class="concept-visual">
-            <svg viewBox="0 0 320 100" role="img" aria-label="Resistor de 6 ohms entre dois trechos de fio">
-              <path d="M20 50H100M220 50H300" /><rect x="100" y="30" width="120" height="40" rx="3" />
-              <text x="160" y="56">6 Ω</text><text x="160" y="94">Resistor</text>
+            <svg viewBox="0 0 320 100" role="img" aria-label="Representação do elemento de aquecimento de um chuveiro com resistência de 8,8 ohms">
+              <path d="M20 50H90L100 30L120 70L140 30L160 70L180 30L200 70L220 30L230 50H300" />
+              <text x="160" y="20">8,8 Ω</text><text x="160" y="94">Resistência do chuveiro</text>
             </svg>
-            <figcaption>O retângulo representa um resistor no circuito.</figcaption>
+            <figcaption>O elemento resistivo transforma energia elétrica em calor para aquecer a água.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> se um componente recebe 12 V e conduz 2 A, sua resistência nesse ponto é 12 / 2 = <strong>6 Ω</strong>.</p>
+          <p><strong>Na prática:</strong> o elemento de um chuveiro operando em 220 V e 25 A apresenta resistência de 220 / 25 = <strong>8,8 Ω</strong> nessa condição.</p>
         </section>
         <section class="concept-card" aria-labelledby="power-title">
           <small>04 · P — WATT (W)</small>
           <h2 id="power-title">Potência elétrica</h2>
           <p>É a rapidez com que a energia elétrica é transferida ou transformada, por exemplo, em calor ou luz. Um watt corresponde a um joule de energia por segundo.</p>
           <p class="formula">P = V × I</p>
-          <p class="help">Em um resistor: P = R × I² ou P = V² / R.</p>
+          <p class="help">Em uma carga resistiva, como um aquecedor: P = R × I² ou P = V² / R.</p>
           <figure class="concept-visual">
-            <svg viewBox="0 0 320 100" role="img" aria-label="Tensão de 12 volts multiplicada pela corrente de 2 amperes resulta em potência de 24 watts">
+            <svg viewBox="0 0 320 100" role="img" aria-label="Aquecedor em 220 volts com corrente de 10 amperes e potência de 2200 watts">
               <rect x="10" y="25" width="82" height="46" rx="8" /><rect x="125" y="25" width="70" height="46" rx="8" /><rect x="230" y="25" width="80" height="46" rx="8" />
-              <text x="51" y="54">12 V</text><text x="108" y="54">×</text><text x="160" y="54">2 A</text><text x="212" y="54">=</text><text x="270" y="54">24 W</text>
+              <text x="51" y="54">220 V</text><text x="108" y="54">×</text><text x="160" y="54">10 A</text><text x="212" y="54">=</text><text x="270" y="54">2200 W</text>
             </svg>
-            <figcaption>Tensão e corrente determinam a potência neste exemplo.</figcaption>
+            <figcaption>Potência de um aquecedor elétrico residencial.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> um resistor ligado a 12 V e percorrido por 2 A transforma 12 × 2 = <strong>24 W</strong> em calor.</p>
+          <p><strong>Na prática:</strong> um aquecedor residencial ligado em 220 V, com corrente de 10 A, transforma 220 × 10 = <strong>2200 W</strong> em calor enquanto está aquecendo.</p>
         </section>
         <section class="concept-card" aria-labelledby="ohm-title">
           <small>05 · RELAÇÃO ENTRE V, I E R</small>
           <h2 id="ohm-title">Lei de Ohm</h2>
-          <p>Em um resistor ôhmico, com condições como temperatura mantidas constantes, tensão e corrente são proporcionais. A resistência relaciona essas duas grandezas.</p>
+          <p>Em uma carga resistiva, mantendo a resistência constante, tensão e corrente são proporcionais. Essa relação ajuda a entender o funcionamento de elementos de aquecimento usados em casas e edifícios.</p>
           <p class="formula">V = R × I · I = V / R · R = V / I</p>
           <p class="help">Conhecendo dois valores, você pode calcular o terceiro.</p>
           <figure class="concept-visual">
-            <svg viewBox="0 0 320 100" role="img" aria-label="Com resistência fixa de 6 ohms, 6 volts produzem 1 ampere e 12 volts produzem 2 amperes">
-              <text x="160" y="20">Resistência fixa: 6 Ω</text>
-              <path d="M115 45H205L195 39M205 45L195 51M115 78H205L195 72M205 78L195 84" />
-              <text x="65" y="51">6 V</text><text x="255" y="51">1 A</text><text x="65" y="84">12 V</text><text x="255" y="84">2 A</text>
+            <svg viewBox="0 0 320 100" role="img" aria-label="Aquecedor com resistência de 22 ohms em 220 volts conduz 10 amperes">
+              <text x="160" y="20">Aquecedor: R = 22 Ω</text>
+              <path d="M110 52H210L200 44M210 52L200 60" />
+              <text x="60" y="58">220 V</text><text x="260" y="58">10 A</text>
+              <text x="160" y="92">I = 220 / 22</text>
             </svg>
-            <figcaption>Dobrar a tensão dobra a corrente se R permanecer constante.</figcaption>
+            <figcaption>A Lei de Ohm relaciona a tensão, a resistência e a corrente do aquecedor.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> com um resistor de 6 Ω, uma fonte de 6 V produz 1 A. Com 12 V, a corrente passa a <strong>2 A</strong>.</p>
+          <p><strong>Na prática:</strong> um aquecedor projetado para 220 V, com resistência de 22 Ω em funcionamento, conduz 220 / 22 = <strong>10 A</strong>. A resistência pode variar com a temperatura.</p>
         </section>
         <section class="concept-card" aria-labelledby="energy-title">
           <small>06 · E — QUILOWATT-HORA (kWh)</small>
@@ -112,15 +113,15 @@
           <p class="formula">E (kWh) = P (W) / 1000 × t (h)</p>
           <p class="help">Para potência constante. t é o tempo em horas; 1000 W equivalem a 1 kW.</p>
           <figure class="concept-visual">
-            <svg viewBox="0 0 320 100" role="img" aria-label="Um aparelho de 1 quilowatt ligado por 2 horas consome 2 quilowatts-hora">
-              <text x="160" y="22">1 kW constante</text>
+            <svg viewBox="0 0 320 100" role="img" aria-label="Iluminação de um corredor com potência total de 100 watts consome 1 quilowatt-hora em 10 horas">
+              <text x="160" y="22">Iluminação do corredor: 100 W</text>
               <rect x="30" y="35" width="130" height="34" rx="3" /><rect x="160" y="35" width="130" height="34" rx="3" />
-              <text x="95" y="57">1 kWh</text><text x="225" y="57">1 kWh</text>
-              <text x="30" y="92">0 h</text><text x="160" y="92">1 h</text><text x="290" y="92">2 h</text>
+              <text x="95" y="57">0,5 kWh</text><text x="225" y="57">0,5 kWh</text>
+              <text x="30" y="92">0 h</text><text x="160" y="92">5 h</text><text x="290" y="92">10 h</text>
             </svg>
-            <figcaption>A cada hora, esse aparelho consome mais 1 kWh.</figcaption>
+            <figcaption>Dez lâmpadas de 10 W somam 100 W de potência.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> um aquecedor de 1000 W ligado continuamente por 2 horas consome 1000 / 1000 × 2 = <strong>2 kWh</strong>.</p>
+          <p><strong>Na prática:</strong> dez lâmpadas de 10 W no corredor de um prédio, acesas por 10 horas ao dia, consomem 100 / 1000 × 10 = <strong>1 kWh por dia</strong>. Em 30 dias de uso igual, são <strong>30 kWh</strong>.</p>
         </section>
       </div>
       <p><a class="nav-link" href="./calculator.html">Praticar na calculadora →</a></p>
