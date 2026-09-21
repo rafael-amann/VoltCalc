@@ -8,6 +8,7 @@ const routes = {
   '/calculator.html': ['calculator.html', 'text/html'],
   '/fundamentals.html': ['fundamentals.html', 'text/html'],
   '/styles.css': ['styles.css', 'text/css'],
+  '/assets/voltcalc-mark.svg': ['assets/voltcalc-mark.svg', 'image/svg+xml'],
   '/dist/main.js': ['dist/main.js', 'text/javascript'],
   '/dist/calculations.js': ['dist/calculations.js', 'text/javascript'],
 };
