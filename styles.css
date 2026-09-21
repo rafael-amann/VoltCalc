@@ -27,6 +27,18 @@ button:hover { background: #90ecd5; }
 #error:empty { display: none; }
 .result-panel { margin-top: 24px; padding-top: 20px; border-top: 1px solid #536a7e; }
 output { overflow-wrap: anywhere; }
+.calculator-header { display: grid; grid-template-columns: 1fr auto 1fr; }
+.calculator-header .brand { justify-self: start; }
+.calculator-header .home-link { justify-self: center; text-align: center; }
+.calculator-header nav { justify-self: end; }
+.calculator-main { margin: 0 auto 32px; padding-top: 24px; }
+.calculator-main h1 { margin-top: 8px; }
+.calculator-main section { margin-top: 20px; }
+@media (max-width: 700px) {
+  .calculator-header { grid-template-columns: 1fr auto; gap: 12px; }
+  .calculator-header .home-link { grid-column: 1 / -1; grid-row: 2; }
+  .calculator-header nav { grid-column: 2; grid-row: 1; }
+}
 @media (max-width: 520px) {
   main { margin: 32px auto; padding: 20px; }
   section { padding: 20px; }
