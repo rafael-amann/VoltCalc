@@ -20,19 +20,44 @@
       </nav>
     </header>
     <main>
-      <small>EM DESENVOLVIMENTO · v0.1 · ETAPA 1</small>
+      <small>FERRAMENTAS ELÉTRICAS · v0.1</small>
       <h1>Calculadora</h1>
-      <p>Calcule a corrente elétrica a partir da potência e da tensão.</p>
+      <p>Escolha o que deseja calcular e informe os dois valores que você conhece.</p>
       <section>
-        <h2>Corrente elétrica</h2>
-        <p>Exemplo fixo: potência de 5500 W e tensão de 220 V.</p>
-        <p>I = P / V</p>
-        <output id="result">Carregando cálculo…</output>
+        <form id="calculator-form" novalidate>
+          <label for="target">O que você quer calcular?</label>
+          <select id="target">
+            <option value="current">Corrente (A)</option>
+            <option value="voltage">Tensão (V)</option>
+            <option value="resistance">Resistência (Ω — ohms)</option>
+            <option value="power">Potência (W)</option>
+          </select>
+          <label for="formula">Quais valores você conhece?</label>
+          <select id="formula"></select>
+          <div class="input-grid">
+            <div>
+              <label id="first-label" for="first-value">Primeiro valor</label>
+              <input id="first-value" type="text" inputmode="decimal" aria-describedby="input-help error" />
+            </div>
+            <div>
+              <label id="second-label" for="second-value">Segundo valor</label>
+              <input id="second-value" type="text" inputmode="decimal" aria-describedby="input-help error" />
+            </div>
+          </div>
+          <p id="input-help" class="help">Use valores maiores que zero. Decimais com vírgula ou ponto, sem separadores de milhar.</p>
+          <p id="expression" class="formula"></p>
+          <button type="submit">Calcular</button>
+          <p id="error" role="alert"></p>
+          <div class="result-panel">
+            <span>Resultado</span>
+            <output id="result" for="first-value second-value" aria-live="polite">—</output>
+          </div>
+        </form>
       </section>
-      <p>Próximo passo: entender o cálculo e preparar uma função. Os campos para digitar valores serão adicionados depois.</p>
-      <small>Exemplo de carga resistiva ideal. Não dimensiona uma instalação.</small>
+      <p class="help">I = corrente · V = tensão · R = resistência · P = potência.</p>
+      <small>Para circuitos resistivos em corrente contínua ou cargas resistivas ideais em corrente alternada (valores eficazes, fator de potência 1). Não se aplica diretamente a motores ou sistemas trifásicos e não dimensiona instalações.</small>
     </main>
-    <script src="/preview.js"></script>
+    <script type="module" src="./dist/main.js"></script>
   </body>
 </html>
 

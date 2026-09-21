@@ -13,4 +13,25 @@ body { margin: 0; background: #101922; color: #edf4fa; font: 18px/1.6 system-ui,
 .nav-link { color: #bfcedb; text-decoration: none; padding: 8px 0; }
 .nav-link:hover, .nav-link[aria-current=page] { color: #63dec0; }
 .nav-link:focus-visible { outline: 2px solid #63dec0; outline-offset: 6px; }
+* { box-sizing: border-box; }
+label { display: block; margin-bottom: 8px; font-weight: 600; }
+input, select, button { font: inherit; border-radius: 8px; }
+input, select { width: 100%; padding: 12px; border: 1px solid #536a7e; background: #101922; color: #edf4fa; margin-bottom: 20px; }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid #63dec0; outline-offset: 3px; }
+.input-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.help { font-size: 14px; }
+.formula { color: #63dec0; font-weight: 600; }
+button { padding: 12px 24px; border: 0; background: #63dec0; color: #101922; font-weight: 700; cursor: pointer; width: 100%; }
+button:hover { background: #90ecd5; }
+#error { color: #ffb6b6; font-size: 16px; }
+#error:empty { display: none; }
+.result-panel { margin-top: 24px; padding-top: 20px; border-top: 1px solid #536a7e; }
+output { overflow-wrap: anywhere; }
+@media (max-width: 520px) {
+  main { margin: 32px auto; padding: 20px; }
+  section { padding: 20px; }
+  h1 { font-size: 36px; }
+  .site-header { padding: 16px 20px; }
+  .input-grid { grid-template-columns: 1fr; gap: 0; }
+}
 

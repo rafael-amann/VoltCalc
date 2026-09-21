@@ -2,11 +2,13 @@
   "name": "voltcalc",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "Electrical calculation tools built step by step with TypeScript.",
   "scripts": {
     "check": "tsc --noEmit",
     "build": "tsc",
-    "start": "node dist/main.js"
+    "start": "npm run build && node server.cjs",
+    "test": "npm run build && node --test tests/calculations.test.mjs"
   },
   "devDependencies": {
     "typescript": "^7.0.2"
