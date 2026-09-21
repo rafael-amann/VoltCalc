@@ -23,6 +23,8 @@ Abra http://localhost:5173. Para parar, pressione Ctrl+C no terminal. Depois de 
 
 ## Arquivos e ordem sugerida de estudo
 
+A página `fundamentals.html`, acessível pelo link **Fundamentos**, apresenta tensão, corrente, resistência, potência, Lei de Ohm e consumo em kWh. Cada card inclui explicação, fórmula, exemplo e diagrama SVG. Ela compartilha `styles.css` e o padrão de cabeçalho das demais páginas, sem dependências adicionais.
+
 1. `src/calculations.ts`: tipos, unidades, fórmulas e validação dos números.
 2. `calculator.html`: seletores, campos, botão e resultado.
 3. `src/main.ts`: conecta o formulário às fórmulas e atualiza a tela.

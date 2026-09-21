@@ -6,6 +6,7 @@ const routes = {
   '/': ['index.html', 'text/html'],
   '/index.html': ['index.html', 'text/html'],
   '/calculator.html': ['calculator.html', 'text/html'],
+  '/fundamentals.html': ['fundamentals.html', 'text/html'],
   '/styles.css': ['styles.css', 'text/css'],
   '/dist/main.js': ['dist/main.js', 'text/javascript'],
   '/dist/calculations.js': ['dist/calculations.js', 'text/javascript'],
