@@ -9,20 +9,54 @@
   </head>
   <body>
     <header class="site-header calculator-header">
-      <a class="brand" href="./index.html" aria-label="VoltCalc — página inicial">
-        <img class="brand-logo" src="./assets/voltcalc-mark.svg" width="48" height="48" alt="" />
-        <span class="brand-name">Volt<span>Calc</span></span>
+      <a class="brand approved-brand" href="./index.html" aria-label="VoltCalc — página inicial">
+        <img class="approved-logo" src="./assets/voltcalc-logo.png" width="2078" height="757" alt="VoltCalc" />
       </a>
       <nav aria-label="Navegação principal">
+        <a class="nav-link" href="./index.html" aria-current="page">Início</a>
         <a class="nav-link" href="./calculator.html">Calculadoras</a>
+        <a class="nav-link" href="./energy.html">Consumo de energia</a>
         <a class="nav-link" href="./fundamentals.html">Fundamentos</a>
       </nav>
     </header>
-    <main>
-      <small>EM DESENVOLVIMENTO · v0.1 · ETAPA 1</small>
-      <h1>VoltCalc</h1>
-      <p>Aprendendo TypeScript com cálculos elétricos.</p>
-      <p>Ferramentas para cálculos elétricos, construídas uma etapa por vez. Acesse a Calculadora no menu para acompanhar nossa primeira ferramenta.</p>
+    <main class="home-main">
+      <div class="home-hero">
+        <h1>Entenda a eletricidade.<br /><span>Simplifique seus cálculos.</span></h1>
+        <p>Ferramentas e explicações para estudar conceitos e fazer cálculos de elétrica residencial e predial.</p>
+        <div class="home-actions">
+          <a class="home-button" href="./calculator.html">Começar a calcular →</a>
+          <a class="home-button home-button-secondary" href="./fundamentals.html">Aprender os fundamentos</a>
+        </div>
+      </div>
+      <div class="home-tools" aria-labelledby="home-tools-title">
+        <h2 id="home-tools-title">O que você quer fazer?</h2>
+        <p>Escolha uma ferramenta para começar.</p>
+        <div class="home-card-grid">
+          <section class="home-card" aria-labelledby="home-electrical-title">
+            <span class="home-card-symbol" aria-hidden="true">V · A · Ω</span>
+            <h3 id="home-electrical-title">Grandezas elétricas</h3>
+            <p>Calcule corrente, tensão, resistência e potência usando os valores que você conhece.</p>
+            <a class="nav-link" href="./calculator.html#electrical">Calcular grandezas →</a>
+          </section>
+          <section class="home-card" aria-labelledby="home-energy-title">
+            <span class="home-card-symbol" aria-hidden="true">kWh</span>
+            <h3 id="home-energy-title">Consumo e custo</h3>
+            <p>Estime quanto seus aparelhos consomem e quanto esse uso pode custar.</p>
+            <a class="nav-link" href="./energy.html">Estimar consumo →</a>
+          </section>
+          <section class="home-card" aria-labelledby="home-learning-title">
+            <span class="home-card-symbol" aria-hidden="true">V = R × I</span>
+            <h3 id="home-learning-title">Fundamentos elétricos</h3>
+            <p>Entenda as fórmulas com explicações, diagramas e exemplos do dia a dia.</p>
+            <a class="nav-link" href="./fundamentals.html">Explorar fundamentos →</a>
+          </section>
+        </div>
+      </div>
+      <aside class="home-guidance">
+        <h2>Está começando?</h2>
+        <p>Conheça os fundamentos e depois pratique nas calculadoras.</p>
+        <a class="nav-link" href="./fundamentals.html">Comece por aqui →</a>
+      </aside>
     </main>
 
   </body>

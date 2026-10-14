@@ -9,21 +9,21 @@
   </head>
   <body>
     <header class="site-header calculator-header">
-      <a class="brand" href="./index.html" aria-label="VoltCalc — página inicial">
-        <img class="brand-logo" src="./assets/voltcalc-mark.svg" width="48" height="48" alt="" />
-        <span class="brand-name">Volt<span>Calc</span></span>
+      <a class="brand approved-brand" href="./index.html" aria-label="VoltCalc — página inicial">
+        <img class="approved-logo" src="./assets/voltcalc-logo.png" width="2078" height="757" alt="VoltCalc" />
       </a>
       <nav aria-label="Navegação principal">
-        <a class="nav-link" href="./index.html">Voltar à página inicial</a>
+        <a class="nav-link" href="./index.html">Início</a>
+        <a class="nav-link" href="./calculator.html" aria-current="page">Calculadoras</a>
+        <a class="nav-link" href="./energy.html">Consumo de energia</a>
         <a class="nav-link" href="./fundamentals.html">Fundamentos</a>
       </nav>
     </header>
     <main class="calculator-main">
-      <small>FERRAMENTAS ELÉTRICAS · v0.1</small>
       <h1>Calcule</h1>
       <nav class="tool-links" aria-label="Ferramentas de cálculo">
         <a class="nav-link" href="#electrical">Grandezas elétricas</a>
-        <a class="nav-link" href="#energy">Consumo de energia</a>
+        <a class="nav-link" href="./energy.html">Consumo de energia</a>
       </nav>
       <section id="electrical" aria-labelledby="electrical-title">
         <h2 id="electrical-title">Grandezas elétricas</h2>
@@ -38,6 +38,17 @@
           </select>
           <label for="formula">Quais valores você conhece?</label>
           <select id="formula"></select>
+          <button id="use-example" class="example-button" type="button">Usar um exemplo</button>
+          <p id="example-description" class="help" role="status"></p>
+          <aside id="example-tour" class="example-tour" aria-label="Exemplo guiado" hidden>
+            <p id="tour-progress" class="help"></p>
+            <p id="tour-message" role="status" aria-live="polite"></p>
+            <div class="tour-actions">
+              <button id="tour-pause" type="button">Pausar</button>
+              <button id="tour-next" type="button">Próximo</button>
+              <button id="tour-close" type="button">Encerrar</button>
+            </div>
+          </aside>
           <div class="input-grid">
             <div>
               <label id="first-label" for="first-value">Primeiro valor</label>
@@ -59,48 +70,11 @@
         </form>
       </section>
       <p class="help">I = corrente · V = tensão · R = resistência · P = potência.</p>
-      <small>Para circuitos resistivos em corrente contínua ou cargas resistivas ideais em corrente alternada (valores eficazes, fator de potência 1). Não se aplica diretamente a motores ou sistemas trifásicos e não dimensiona instalações.</small>
-      <section id="energy" aria-labelledby="energy-title">
-        <h2 id="energy-title">Calculadora de Consumo de Energia</h2>
-        <p>Estime o consumo de um ou mais aparelhos de mesma potência e com o mesmo tempo de uso.</p>
-        <form id="energy-form" novalidate>
-          <div class="input-grid">
-            <div>
-              <label for="energy-power">Potência por aparelho (W)</label>
-              <input id="energy-power" name="power" type="text" inputmode="decimal" aria-describedby="energy-help energy-error" />
-            </div>
-            <div>
-              <label for="energy-quantity">Quantidade de aparelhos</label>
-              <input id="energy-quantity" name="quantity" type="text" inputmode="numeric" aria-describedby="energy-help energy-error" />
-            </div>
-            <div>
-              <label for="energy-hours">Uso por dia (horas)</label>
-              <input id="energy-hours" name="hours" type="text" inputmode="decimal" aria-describedby="energy-help energy-error" />
-            </div>
-            <div>
-              <label for="energy-days">Uso por mês (dias)</label>
-              <input id="energy-days" name="days" type="text" inputmode="numeric" aria-describedby="energy-help energy-error" />
-            </div>
-          </div>
-          <label for="energy-tariff">Tarifa de energia (R$/kWh)</label>
-          <input id="energy-tariff" name="tariff" type="text" inputmode="decimal" aria-describedby="tariff-help energy-help energy-error" />
-          <p id="tariff-help" class="help">Informe sua tarifa manualmente, consultando sua conta ou distribuidora. Ela varia conforme região e condições tarifárias.</p>
-          <p id="energy-help" class="help">Use vírgula ou ponto decimal, sem separadores de milhar. Quantidade inteira a partir de 1; horas entre 0 e 24; dias inteiros entre 0 e 31.</p>
-          <p class="formula">kWh/dia de uso = W ÷ 1000 × horas × quantidade</p>
-          <button type="submit">Calcular consumo e custo</button>
-          <p id="energy-error" class="form-error" role="alert"></p>
-          <div id="energy-results" class="result-panel energy-results" aria-live="polite" aria-atomic="true">
-            <div><span>Consumo diário</span><output id="daily-consumption">—</output></div>
-            <div><span>Consumo mensal</span><output id="monthly-consumption">—</output></div>
-            <div><span>Custo diário estimado</span><output id="daily-cost">—</output></div>
-            <div><span>Custo mensal estimado</span><output id="monthly-cost">—</output></div>
-          </div>
-          <p class="help">Diário corresponde a um dia de uso. Mensal corresponde aos dias informados. Consideramos potência constante durante o período; aparelhos que ligam e desligam automaticamente podem consumir diferente.</p>
-          <p class="help">O custo é uma estimativa para os aparelhos informados. A conta real pode incluir impostos, bandeiras tarifárias, taxas e outros componentes que não estejam incluídos na tarifa digitada.</p>
-        </form>
-      </section>
+      <details class="calculator-scope">
+        <summary>Quando usar esta calculadora</summary>
+        <p class="help">Use para cargas resistivas, como os exemplos de chuveiro e aquecedor. Em corrente alternada, as contas consideram valores eficazes e fator de potência 1. Motores e sistemas trifásicos exigem outros cálculos. Os resultados não definem cabos ou disjuntores.</p>
+      </details>
     </main>
     <script type="module" src="./dist/main.js"></script>
-    <script type="module" src="./dist/energy-form.js"></script>
   </body>
 </html>

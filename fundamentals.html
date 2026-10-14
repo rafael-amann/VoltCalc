@@ -9,25 +9,26 @@
   </head>
   <body>
     <header class="site-header calculator-header">
-      <a class="brand" href="./index.html" aria-label="VoltCalc — página inicial">
-        <img class="brand-logo" src="./assets/voltcalc-mark.svg" width="48" height="48" alt="" />
-        <span class="brand-name">Volt<span>Calc</span></span>
+      <a class="brand approved-brand" href="./index.html" aria-label="VoltCalc — página inicial">
+        <img class="approved-logo" src="./assets/voltcalc-logo.png" width="2078" height="757" alt="VoltCalc" />
       </a>
       <nav aria-label="Navegação principal">
-        <a class="nav-link" href="./index.html">Voltar ao início</a>
+        <a class="nav-link" href="./index.html">Início</a>
         <a class="nav-link" href="./calculator.html">Calculadoras</a>
+        <a class="nav-link" href="./energy.html">Consumo de energia</a>
+        <a class="nav-link" href="./fundamentals.html" aria-current="page">Fundamentos</a>
       </nav>
     </header>
     <main class="calculator-main fundamentals-main">
-      <small>APRENDA O BÁSICO</small>
       <h1>Fundamentos Elétricos</h1>
-      <p>Seis conceitos para entender a eletricidade em casas e edifícios.</p>
-      <p class="help">Nos exemplos de chuveiro e aquecedor, consideramos cargas resistivas ideais em corrente alternada, com valores eficazes e fator de potência 1. São exemplos de cálculo, não de dimensionamento de cabos ou disjuntores.</p>
+      <p>O que significam os números escritos no chuveiro, no aquecedor e na lâmpada? Vamos entender cada um e aprender a fazer as contas.</p>
+      <p class="help">Comece por tensão, corrente e resistência. Depois, veja como elas se relacionam com potência e consumo. Nos exemplos, usamos aparelhos que aquecem por resistência, em um modelo simplificado. As contas não escolhem cabos ou disjuntores.</p>
       <div class="fundamentals-grid">
         <section class="concept-card" aria-labelledby="voltage-title">
           <small>01 · V — VOLT</small>
           <h2 id="voltage-title">Tensão elétrica</h2>
-          <p>A tensão é a diferença de potencial elétrico entre dois pontos. Ela indica quanta energia pode ser transferida por unidade de carga que passa entre esses pontos.</p>
+          <p>Pense na tensão como um “empurrão” que pode fazer as cargas elétricas se moverem quando o circuito está fechado. Ela é sempre uma diferença entre dois pontos e é medida em volts (V).</p>
+          <p>Quando um aparelho indica <strong>220 V</strong>, esse número informa a tensão de alimentação prevista para ele. Tensão não é a quantidade de energia que o aparelho consome.</p>
           <p class="formula">V = I × R</p>
           <p class="help">V: tensão em volts · I: corrente em amperes · R: resistência em ohms.</p>
           <figure class="concept-visual">
@@ -39,12 +40,18 @@
             </svg>
             <figcaption>A tensão é considerada entre os dois terminais de alimentação.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> um chuveiro de 5500 W projetado para 220 V funciona com essa tensão entre seus terminais. No modelo resistivo, 25 A × 8,8 Ω = <strong>220 V</strong>.</p>
+          <p><strong>Exemplo: chuveiro elétrico.</strong> Sabemos que passam 25 A pela resistência de 8,8 Ω. Qual é a tensão?</p>
+          <ol>
+            <li>Use a fórmula: tensão = corrente × resistência.</li>
+            <li>Substitua os valores: 25 × 8,8.</li>
+            <li>Resultado: <strong>220 V</strong> entre os terminais do chuveiro.</li>
+          </ol>
         </section>
         <section class="concept-card" aria-labelledby="current-title">
           <small>02 · I — AMPERE (A)</small>
           <h2 id="current-title">Corrente elétrica</h2>
-          <p>É a quantidade de carga elétrica que atravessa uma parte do circuito a cada segundo. Em um circuito fechado, uma fonte pode manter esse movimento de cargas.</p>
+          <p>A corrente é o fluxo de cargas elétricas pelo circuito. Ela indica quanta carga passa por um ponto a cada segundo e é medida em amperes (A).</p>
+          <p>Na comparação com água em um cano, a tensão lembra a diferença de pressão, e a corrente lembra a vazão. É uma comparação para ajudar a imaginar: nos fios, quem se move são cargas elétricas.</p>
           <p class="formula">I = P / V</p>
           <p class="help">Para uma carga resistiva, divida a potência em watts pela tensão em volts.</p>
           <figure class="concept-visual">
@@ -55,12 +62,18 @@
             </svg>
             <figcaption>Na rede alternada, a corrente muda de sentido periodicamente.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> um chuveiro operando a 5500 W em 220 V solicita 5500 / 220 = <strong>25 A</strong> do seu circuito.</p>
+          <p><strong>Exemplo: chuveiro de 5500 W em 220 V.</strong> Qual é a corrente enquanto ele funciona nessa potência?</p>
+          <ol>
+            <li>Divida a potência pela tensão.</li>
+            <li>Faça a conta: 5500 ÷ 220.</li>
+            <li>Resultado: <strong>25 A</strong> no circuito do chuveiro.</li>
+          </ol>
         </section>
         <section class="concept-card" aria-labelledby="resistance-title">
           <small>03 · R — OHM (Ω)</small>
           <h2 id="resistance-title">Resistência elétrica</h2>
-          <p>É a oposição à passagem da corrente elétrica. Mantendo a mesma tensão, uma resistência maior deixa passar uma corrente menor.</p>
+          <p>A resistência representa a dificuldade que a corrente encontra para passar. Sua unidade é o ohm (Ω). Com a mesma tensão, uma resistência maior faz passar menos corrente.</p>
+          <p>No chuveiro, o elemento chamado “resistência” transforma energia elétrica em calor. Esse calor aquece a água.</p>
           <p class="formula">R = V / I</p>
           <p class="help">Ohm é a unidade da resistência; seu símbolo é Ω.</p>
           <figure class="concept-visual">
@@ -70,12 +83,18 @@
             </svg>
             <figcaption>O elemento resistivo transforma energia elétrica em calor para aquecer a água.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> o elemento de um chuveiro operando em 220 V e 25 A apresenta resistência de 220 / 25 = <strong>8,8 Ω</strong> nessa condição.</p>
+          <p><strong>Exemplo: o mesmo chuveiro, em 220 V e 25 A.</strong> Qual é a resistência durante esse funcionamento?</p>
+          <ol>
+            <li>Divida a tensão pela corrente.</li>
+            <li>Faça a conta: 220 ÷ 25.</li>
+            <li>Resultado: <strong>8,8 Ω</strong>. Leia “oito vírgula oito ohms”.</li>
+          </ol>
         </section>
         <section class="concept-card" aria-labelledby="power-title">
           <small>04 · P — WATT (W)</small>
           <h2 id="power-title">Potência elétrica</h2>
-          <p>É a rapidez com que a energia elétrica é transferida ou transformada, por exemplo, em calor ou luz. Um watt corresponde a um joule de energia por segundo.</p>
+          <p>A potência indica o ritmo em que um aparelho usa energia. É medida em watts (W). Quanto maior a potência, mais energia ele usa no mesmo tempo de funcionamento.</p>
+          <p>Um aquecedor de 2000 W ligado por uma hora consome o dobro da energia de um de 1000 W ligado pela mesma hora, se ambos mantiverem essas potências durante todo o período.</p>
           <p class="formula">P = V × I</p>
           <p class="help">Em uma carga resistiva, como um aquecedor: P = R × I² ou P = V² / R.</p>
           <figure class="concept-visual">
@@ -85,12 +104,18 @@
             </svg>
             <figcaption>Potência de um aquecedor elétrico residencial.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> um aquecedor residencial ligado em 220 V, com corrente de 10 A, transforma 220 × 10 = <strong>2200 W</strong> em calor enquanto está aquecendo.</p>
+          <p><strong>Exemplo: aquecedor em 220 V com corrente de 10 A.</strong> Qual é sua potência?</p>
+          <ol>
+            <li>Multiplique a tensão pela corrente.</li>
+            <li>Faça a conta: 220 × 10.</li>
+            <li>Resultado: <strong>2200 W</strong>, ou <strong>2,2 kW</strong>, enquanto está aquecendo.</li>
+          </ol>
         </section>
         <section class="concept-card" aria-labelledby="ohm-title">
           <small>05 · RELAÇÃO ENTRE V, I E R</small>
           <h2 id="ohm-title">Lei de Ohm</h2>
-          <p>Em uma carga resistiva, mantendo a resistência constante, tensão e corrente são proporcionais. Essa relação ajuda a entender o funcionamento de elementos de aquecimento usados em casas e edifícios.</p>
+          <p>A Lei de Ohm liga os três conceitos que vimos: tensão, corrente e resistência. Conhecendo dois deles, você consegue encontrar o terceiro em uma carga resistiva.</p>
+          <p>Se a resistência não mudar, aumentar a tensão aumenta a corrente na mesma proporção. Por exemplo, dobrar a tensão dobra a corrente nesse modelo.</p>
           <p class="formula">V = R × I · I = V / R · R = V / I</p>
           <p class="help">Conhecendo dois valores, você pode calcular o terceiro.</p>
           <figure class="concept-visual">
@@ -102,12 +127,19 @@
             </svg>
             <figcaption>A Lei de Ohm relaciona a tensão, a resistência e a corrente do aquecedor.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> um aquecedor projetado para 220 V, com resistência de 22 Ω em funcionamento, conduz 220 / 22 = <strong>10 A</strong>. A resistência pode variar com a temperatura.</p>
+          <p><strong>Exemplo: aquecedor de 220 V com resistência de 22 Ω.</strong> Vamos descobrir a corrente.</p>
+          <ol>
+            <li>Escolha a fórmula para corrente: I = V ÷ R.</li>
+            <li>Substitua os valores: 220 ÷ 22.</li>
+            <li>Resultado: <strong>10 A</strong>.</li>
+          </ol>
+          <p class="help">Usamos a resistência na condição de funcionamento. Na prática, ela pode mudar com a temperatura.</p>
         </section>
         <section class="concept-card" aria-labelledby="energy-title">
           <small>06 · E — QUILOWATT-HORA (kWh)</small>
           <h2 id="energy-title">Energia e consumo</h2>
-          <p>A energia consumida depende da potência do aparelho e do tempo de uso. kW mede potência; kWh mede energia acumulada ao longo do tempo.</p>
+          <p>O consumo é a energia usada ao longo de um período. Para calcular, precisamos saber a potência e por quanto tempo o aparelho ficou ligado.</p>
+          <p><strong>kW é potência; kWh é energia.</strong> Um aparelho que mantém 1 kW durante uma hora consome 1 kWh. Esse é o tipo de unidade que aparece no consumo da conta de luz.</p>
           <p class="formula">E (kWh) = P (W) / 1000 × t (h)</p>
           <p class="help">Para potência constante. t é o tempo em horas; 1000 W equivalem a 1 kW.</p>
           <figure class="concept-visual">
@@ -119,9 +151,17 @@
             </svg>
             <figcaption>Dez lâmpadas de 10 W somam 100 W de potência.</figcaption>
           </figure>
-          <p><strong>Na prática:</strong> dez lâmpadas de 10 W no corredor de um prédio, acesas por 10 horas ao dia, consomem 100 / 1000 × 10 = <strong>1 kWh por dia</strong>. Em 30 dias de uso igual, são <strong>30 kWh</strong>.</p>
+          <p><strong>Exemplo: iluminação do corredor.</strong> São dez lâmpadas de 10 W, acesas durante 10 horas por dia.</p>
+          <ol>
+            <li>Some a potência: 10 lâmpadas × 10 W = <strong>100 W</strong>.</li>
+            <li>Converta para kW: 100 ÷ 1000 = <strong>0,1 kW</strong>.</li>
+            <li>Multiplique pelo tempo: 0,1 × 10 = <strong>1 kWh por dia</strong>.</li>
+            <li>Em 30 dias de uso igual: 1 × 30 = <strong>30 kWh</strong>.</li>
+          </ol>
+          <p class="help">Para estimar o custo, multiplique o consumo em kWh pela tarifa em R$/kWh. Na calculadora de consumo, você informa a tarifa da sua região.</p>
         </section>
       </div>
+      <p class="help">Sobre as fórmulas: nos exemplos de aquecimento, consideramos cargas resistivas ideais, com fator de potência 1. Os valores de tensão e corrente da rede são valores eficazes, usados nos cálculos em corrente alternada. As mesmas contas não se aplicam diretamente a qualquer motor ou aparelho eletrônico.</p>
       <p><a class="nav-link" href="./calculator.html">Praticar na calculadora →</a></p>
     </main>
   </body>
